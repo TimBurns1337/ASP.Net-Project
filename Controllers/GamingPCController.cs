@@ -22,13 +22,20 @@ namespace ASP.Net_project.Controllers
                                     "Case: PC-O11D Razer Mid Tower $250" +
             "Final Price $4000",
             Summary = "CPU: AMD Ryzen 9 5950X $800 GPU: Nvidia GeForce RTX 3090 $1500, Final Price: $4000",
-            Image_Link = "../Images/HP.jfif", 
+            Image_Link = "RGB.jpeg", 
             Price = 4000
-        } };
+        },
+        new GamingPC()
+        { Pc_Id = 2, Componets = "3.7 GHz AMD Ryzen 5 4600G processor and 12GB DDR4 RAM deliver superior speed and power to handle high-end games and editing software",
+            Summary = "ASUS ROG Strix G10DK Gaming PC - Grey (AMD Ryzen 5 4600G/512GB SSD/12GB RAM/GTX1660 SUPER)",
+            Image_Link = "HP.jpeg",
+            Price = 3000
+        }};
 
         public IActionResult Index()
         {
-            return View();
+            ViewBag.Action = "Index";
+            return View(gamingPCs);
         }
 
     }
