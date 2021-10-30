@@ -11,7 +11,7 @@ namespace ASP.Net_project.Controllers
     {
         IList<GamingPC> gamingPCs = new List<GamingPC>
         { new GamingPC()
-        { Pc_Id = 1, Componets = "High Performance Gaming PC " +
+        { PcId = 1, Componets = "High Performance Gaming PC " +
                                     "CPU: AMD Ryzen 9 5950X $800" +
                                     "GPU: Nvidia GeForce RTX 3090 $1500" +
                                     "Motherboard: Asus ROG Maximus XII Extreme $1000" +
@@ -26,7 +26,7 @@ namespace ASP.Net_project.Controllers
             Price = 4000
         },
         new GamingPC()
-        { Pc_Id = 2, Componets = "3.7 GHz AMD Ryzen 5 4600G processor and 12GB DDR4 RAM deliver superior speed and power to handle high-end games and editing software",
+        { PcId = 2, Componets = "3.7 GHz AMD Ryzen 5 4600G processor and 12GB DDR4 RAM deliver superior speed and power to handle high-end games and editing software",
             Summary = "ASUS ROG Strix G10DK Gaming PC - Grey (AMD Ryzen 5 4600G/512GB SSD/12GB RAM/GTX1660 SUPER)",
             Image_Link = "HP.jpeg",
             Price = 3000
