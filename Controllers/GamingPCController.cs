@@ -25,6 +25,7 @@ namespace ASP.Net_project.Controllers
                                     "Cooling: Corsair H115i RGB Platinum $200"+
                                     "Case: PC-O11D Razer Mid Tower $250",
             Summary = "CPU: AMD Ryzen 9 5950X $800 GPU: Nvidia GeForce RTX 3090",
+            Name = "RTX 3090 Build",
             ImageLink = "Rog.jfif",
             Price = 4000
         },
@@ -40,6 +41,7 @@ namespace ASP.Net_project.Controllers
                         "VR ready design supports advanced Virtual Reality software and games" +
                         "Windows 10 Home operating system comes with a robust security system, handy features, and Croatia virtual assistant",
             Summary = "ASUS ROG Strix G10DK Gaming PC - Grey (AMD Ryzen 5 4600G/512GB SSD/12GB RAM/GTX1660 SUPER)",
+            Name = "Ryzen 5 Build",
             ImageLink = "RGB.jpg",
             Price = 3000
         },
@@ -56,6 +58,7 @@ namespace ASP.Net_project.Controllers
                         "VR ready design supports advanced Virtual Reality software and games" +
                         "Windows 10 Home operating system comes with a robust security system, handy features, and Croatia virtual assistant",
             Summary = "ASUS ROG Strix G15DK Gaming PC - Black (AMD Ryzen 7-5800X/2TB HDD/512GB SSD/16GB RAM/GeForce RTX 3070)",
+            Name = "Ryzen 7 Build",
             ImageLink = "g15dk.jpg",
             Price = 1300
         }};

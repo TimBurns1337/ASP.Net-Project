@@ -12,6 +12,7 @@ namespace ASP.Net_project.Models
         public string Componets { get; set; }
         // proived a shorted view of components - cpu and gpu 
         public string Summary { get; set; }
+        public string Name { get; set; }
         public string ImageLink { get; set; }
         public int Price { get; set; }
 
