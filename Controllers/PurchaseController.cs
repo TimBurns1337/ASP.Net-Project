@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ASP.Net_project.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,11 +8,17 @@ using System.Threading.Tasks;
 
 namespace ASP.Net_project.Controllers
 {
+    
+  
     public class PurchaseController : Controller
     {
+      
+
         // GET: PurchaseController
         public ActionResult Index()
         {
+            ViewBag.Action = "Index";
+           
             return View();
         }
 
@@ -68,7 +75,7 @@ namespace ASP.Net_project.Controllers
         {
             return View();
         }
-
+       
         // POST: PurchaseController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]

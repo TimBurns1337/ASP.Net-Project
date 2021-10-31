@@ -6,8 +6,29 @@ using System.Threading.Tasks;
 
 namespace ASP.Net_project.Models
 {
+
+ 
     public class Purchase
     {
+        public Purchase()
+        {
+        }
+
+        public Purchase(int purchaseId, string fname, string lname, string email, string phone, string address, string pCode, string cardNo, string cardExpDate, int cvcNo, string cardHolderName)
+        {
+            PurchaseId = purchaseId;
+            Fname = fname;
+            Lname = lname;
+            Email = email;
+            Phone = phone;
+            Address = address;
+            PCode = pCode;
+            CardNo = cardNo;
+            CardExpDate = cardExpDate;
+            CvcNo = cvcNo;
+            CardHolderName = cardHolderName;
+        }
+
         public int PurchaseId { get; set; }   
         [Required]        
         public string Fname { get; set; }
