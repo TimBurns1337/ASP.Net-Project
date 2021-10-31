@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Images\RGB.jpg">
+    <None Include="wwwroot\images\Rog.jfif" />
+    <None Include="wwwroot\images\HP.jpeg" />
+    <None Include="wwwroot\images\RGB.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

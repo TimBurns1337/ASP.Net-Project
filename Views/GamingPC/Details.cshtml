@@ -2,16 +2,21 @@
 @{
     string title = ViewBag.Action;
     ViewBag.Title = title;
-
-    var imagePath = Model.ImageLink;
 }
 
 <div class="">
-    <h2 class="h2 text-black-50 text-center">Details for @Model.Summary</h2>
+    <h2 class="h2 text-black-50 text-center">@Model.Summary</h2>
 </div>
 
 <div>
     <div>
-        <img src="@imagePath" alt="desktop image" width="200px" height="200px" />
+        <img src="~/images/@Model.ImageLink" alt="desktop image" width="400px" height="400px" />
+        
+    </div>
+    <div>
+        <p>@Model.Componets</p>
+    </div>
+    <div>
+        <a asp-controller="Purchase" asp-action="Purchase" asp-route-id="@Model.PcId"><button class="btn btn-primary">Purchase</button></a> <span>Price @Model.Price</span>
     </div>
 </div>
