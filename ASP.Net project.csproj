@@ -5,4 +5,10 @@
     <RootNamespace>ASP.Net_project</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="Images\RGB.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
