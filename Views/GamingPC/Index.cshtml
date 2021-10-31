@@ -43,33 +43,34 @@
     <div class="grid-container">        
         @foreach (var pcList in Model)
         {
-    <div class="container2">
-        <h2>@pcList.Name</h2>
-        <div class="imageBox">
-            <img src="~/images/@pcList.ImageLink" alt="@pcList.PcId">
+        <div class="container2">
+            <h2>@pcList.Name</h2>
+            <div class="imageBox">
+                <img src="~/images/@pcList.ImageLink" alt="@pcList.PcId">
+            </div>
+            <br>
+            <p>
+                <b>Pc ID: </b>@pcList.PcId
+            </p>
+            <p>
+                <b>Summary: </b> @pcList.Summary
+            </p>
+            <p>
+                <b>Price: </b>@pcList.Price
+            </p>
+            <p>
+                <b>Estimated Shipping Cost: </b> $29.99
+            </p>
+            <p>
+                <b>Shipped by Canada Post</b>
+            </p>
+            <button type="button"><a asp-controller="Purchase" asp-action="Index" asp-route-id="@pcList.PcId">Add to cart!</a></button>
+            <br><br>
+            <input type="checkbox" id="@pcList.PcId" name="@pcList.PcId" value="@pcList.PcId">
+            <label for="@pcList.PcId"> Compare</label><br>
+            <button type="button"><a asp-controller="GamingPC" asp-action="Details" asp-route-id="@pcList.PcId">More Details</a></button>
         </div>
-        <br>
-        <p>
-            <b>Pc ID: </b>@pcList.PcId
-        </p>
-        <p>
-            <b>Summary: </b> @pcList.Summary
-        </p>
-        <p>
-            <b>Price: </b>@pcList.Price
-        </p>
-        <p>
-            <b>Estimated Shipping Cost: </b> $29.99
-        </p>
-        <p>
-            <b>Shipped by Canada Post</b>
-        </p>
-        <button type="button" ><a asp-controller="Purchase" asp-action="Index" asp-route-id="@pcList.PcId">Add to cart!</a></button>
-        <br><br>
-        <input type="checkbox" id="@pcList.PcId" name="@pcList.PcId" value="@pcList.PcId">
-        <label for="@pcList.PcId"> Compare</label><br>
-    </div>
-                    <br />}
+        }
     </div>
 </body>
 </html>
