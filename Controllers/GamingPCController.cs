@@ -82,9 +82,12 @@ namespace ASP.Net_project.Controllers
             return View();
         }
 
-        public IActionResult Confirm()
+        public IActionResult Confirm(int id, string Fname, string Lname)
         {
             ViewBag.Action = "Confirm";
+            ViewBag.PurCompId = id;
+            ViewBag.PurFname = Fname;
+            ViewBag.PurLname = Lname;
             return View();
         }
 
