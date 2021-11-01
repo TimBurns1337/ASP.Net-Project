@@ -1,6 +1,5 @@
 ﻿@model Purchase 
 
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -12,18 +11,24 @@
 
     <form method="post" asp-controller="Purchase" asp-action="login" class="form-group">
         <div>
-            <label for="id">Purchase Id:</label>
-            <input type="text" id="id" name="id" />
+            <label asp-for="PurchaseId">Purchase Id:</label>
+            <input asp-for="PurchaseId" class="form-control" />
             <span asp-validation-for="PurchaseId" class="text-danger"></span>
         </div>
         <div>
-            <label for="Fname">First Name:</label>
-            <input type="text" id="Fname" name="Fname" />
+            <label asp-for="ComputerId">Computer Id:</label>
+            <input asp-for="ComputerId" class="form-control"/>
+            <span asp-validation-for="ComputerId" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="Fname">First Name:</label>
+            <input asp-for="Fname"  class="form-control" />
             <span asp-validation-for="Fname" class="text-danger"></span>
         </div>
         <div>
-            <label for="Lname">Last Name:</label>
-            <input type="text" id="Lname" name="Lname" />
+            <label asp-for="Lname">Last Name:</label>
+            <input asp-for="Lname" />
             <span asp-validation-for="Lname" class="text-danger"></span>
         </div>
         <div>

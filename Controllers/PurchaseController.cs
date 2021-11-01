@@ -12,7 +12,7 @@ namespace ASP.Net_project.Controllers
   
     public class PurchaseController : Controller
     {
-      
+           
 
         // GET: PurchaseController
         public ActionResult Index()
@@ -29,7 +29,7 @@ namespace ASP.Net_project.Controllers
         }
 
         // GET: PurchaseController/Create
-        public ActionResult Create()
+        public ActionResult Create(int pcId)
         {
             return View();
         }

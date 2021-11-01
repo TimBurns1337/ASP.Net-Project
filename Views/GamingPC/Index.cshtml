@@ -28,12 +28,12 @@
                             <b>Shipped by Canada Post</b>
                         </p>
                         <a asp-controller="GamingPC" asp-action="Details" asp-route-id="@pcList.PcId"><button class="btn btn-primary">Details</button></a>
-                        <a asp-controller="Purchase" asp-action="Index" asp-route-id="@pcList.PcId"><button type="button" class="btn btn-primary">Add to cart!</button></a>
+                        <a asp-controller="GamingPC" asp-action="Purchase" asp-route-id="@pcList.PcId"><button type="button" class="btn btn-primary">Add to cart!</button></a>
                         <br>
                         <input type="checkbox" id="@pcList.PcId" name="@pcList.PcId" value="@pcList.PcId">
                         <label for="@pcList.PcId"> Compare</label><br>
                     </div> 
-                    colCount++;
+                colCount++;
 
                 @if (colCount == 3)
                 {

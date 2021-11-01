@@ -75,5 +75,12 @@ namespace ASP.Net_project.Controllers
             return View(gamingPCs[id - 1]);
         }
 
+        public IActionResult Purchase(int id)
+        {
+            ViewBag.Action = "Index";
+            ViewBag.Computer = id;
+            return View("Index", "Purchase");
+        }
+
     }
 }
