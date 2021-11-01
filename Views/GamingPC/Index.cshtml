@@ -1,76 +1,43 @@
 ﻿@model List<GamingPC>
 @{ string title = ViewBag.Action;
                 ViewBag.Title = title;
+
+    int colCount = 0;
 }
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            padding: 10px;           
-            
-        }        
-
-        img {
-            max-width: 100%;
-            max-height: 100%;
-            display: block; /* remove extra space below image */
-        }
-
-        .imageBox {
-            height: 300px;
-            width: 250px;
-            border: 5px solid black;
-            margin: auto;
-        }
-
-        .container2 {
-            max-width: 400px;
-            border: 1px solid rgba(0, 0, 0, 0.8);
-            padding: 5px;
-        }
-    </style>
-    <!--for some reason style is applying to the whole page
-        class container already in use - use conatiner2 or dif name -->
+    <meta charset="utf-8">    
 </head>
 <body>
     <div>
-        <h2>Pre-Built Pc's'</h2>
+        <h2 class="h2 text-black-50 text-center">Pre-Built Pc's'</h2>
     </div>
-    <br />   
-    <div class="grid-container">        
-        @foreach (var pcList in Model)
-        {
-        <div class="container2">
-            <h2>@pcList.Name</h2>
-            <div class="imageBox">
-                <img src="~/images/@pcList.ImageLink" alt="@pcList.PcId">
-            </div>
-            <br>
-            <p>
-                <b>Pc ID: </b>@pcList.PcId
-            </p>
-            <p>
-                <b>Summary: </b> @pcList.Summary
-            </p>
-            <p>
-                <b>Price: $@pcList.Price</b>
-            </p>
-            <p>
-                <b>Estimated Shipping Cost: </b> $29.99
-            </p>
-            <p>
-                <b>Shipped by Canada Post</b>
-            </p>
-            <button type="button"><a asp-controller="Purchase" asp-action="Index" asp-route-id="@pcList.PcId">Add to cart!</a></button>
-            <br><br>
-            <input type="checkbox" id="@pcList.PcId" name="@pcList.PcId" value="@pcList.PcId">
-            <label for="@pcList.PcId"> Compare</label><br>
-            <button type="button"><a asp-controller="GamingPC" asp-action="Details" asp-route-id="@pcList.PcId">More Details</a></button>
+    <div class="container">
+        <div class="row">
+            @foreach (var pcList in Model)
+            {
+            <div class="col-sm">
+                <h2>@pcList.Name</h2>
+                <img src="~/images/@pcList.ImageLink" width="400px" height="400px" />
+                <p class="p-2 text-black-50 text-center">@pcList.Summary</p>
+                <p class="p-2 text-black-50"><strong>Price : </strong>@pcList.Price</p>
+                <p>
+                    <b>Estimated Shipping Cost: </b> $29.99
+                </p>
+                <p>
+                    <b>Shipped by Canada Post</b>
+                </p>
+                <a asp-controller="GamingPC" asp-action="Details" asp-route-id="@pcList.PcId"><button class="btn btn-primary">Details</button></a>
+                <a asp-controller="Purchase" asp-action="Index" asp-route-id="@pcList.PcId"><button type="button" class="btn btn-primary">Add to cart!</button></a>
+                <br>
+                <input type="checkbox" id="@pcList.PcId" name="@pcList.PcId" value="@pcList.PcId">
+                <label for="@pcList.PcId"> Compare</label><br>
+            </div> colCount++;
+@if (colCount == 3)
+{
+<div class="w-100"></div>                    colCount = 0;
+                }            }
         </div>
-        }
-    </div>
+    </div>    
 </body>
 </html>
