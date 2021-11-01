@@ -91,8 +91,8 @@
                     <input asp-for="CvcNo" class="form-control" />
                     <span asp-validation-for="CvcNo" class="text-danger"></span>
                 </div>
-                <input type="hidden" id="custId" name="custId" value="">
-                <!-- use above to keep track of price -->
+                <input type="hidden" id="Price" name="Price" value="@ViewBag.PurCompPrice">
+                <!-- use above to keep track of price not working as expected -->
             </div>
             <br />
             <div class="row">

@@ -68,7 +68,7 @@ namespace ASP.Net_project.Controllers
         {
             ViewBag.Action = "Index";
             return View(gamingPCs);
-        }
+        }        
 
         public IActionResult Details(int id)
         {
@@ -76,13 +76,34 @@ namespace ASP.Net_project.Controllers
             return View(gamingPCs[id - 1]);
         }
 
-        public IActionResult Purchase(int id)
+       
+
+        [HttpPost]
+        public Double Purchase2(GamingPC model)
+        {
+            try
+            {                
+                Double purPrice = model.Price;
+
+                return purPrice;
+            }
+            catch
+            {
+                return 0.0;
+            }
+        } 
+        public IActionResult Purchase(int id, GamingPC gpc)
         {
             ViewBag.Action = "Purchase";
             ViewBag.PurCompId = id;
+            ViewBag.PurCompPrice = Purchase2(gpc);
+         
+            
             return View();
         }
-       
+
+        
+
         [HttpPost]
         public IActionResult Confirm(IFormCollection collection)
         {
