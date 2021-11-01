@@ -1,0 +1,110 @@
+﻿@model Purchase
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h3 class="h3 text-black-50 text-center">Credit Card Payment</h3>
+
+    <div class="container">
+        <form method="post" asp-action="Confirm" class="form-group">
+            <div class="row">
+                <div class="col-sm">
+                    <label asp-for="PurchaseId">Purchase Id:</label>
+                    <input asp-for="PurchaseId" class="form-control" />
+                    <span asp-validation-for="PurchaseId" class="text-danger"></span>
+                </div>
+                <div class="col-sm">
+                    <label asp-for="ComputerId">Computer:</label>
+                    <input asp-for="ComputerId" class="form-control" value="@ViewBag.PurCompId" readonly />
+                    <span asp-validation-for="ComputerId" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <label asp-for="Fname">First Name:</label>
+                    <input asp-for="Fname" class="form-control" />
+                    <span asp-validation-for="Fname" class="text-danger"></span>
+                </div>
+                <div class="col-sm">
+                    <label asp-for="Lname">Last Name:</label>
+                    <input asp-for="Lname" class="form-control" />
+                    <span asp-validation-for="Lname" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <label asp-for="Email">Email:</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="col-sm">
+                    <label asp-for="Phone">Phone:</label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <label asp-for="Address">Address:</label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="col-sm">
+                    <label asp-for="PCode">Postal Code:</label>
+                    <input asp-for="PCode" class="form-control" />
+                    <span asp-validation-for="PCode" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <label asp-for="CardHolderName">Card Holder:</label>
+                    <input asp-for="CardHolderName" class="form-control" />
+                    <span asp-validation-for="CardHolderName" class="text-danger"></span>
+                </div>
+                <div class="col-sm">
+                    <label asp-for="CardNo">Card Number:</label>
+                    <input asp-for="CardNo" class="form-control" />
+                    <span asp-validation-for="CardNo" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <label asp-for="CardExpDate">Expiry Date:</label>
+                    <input asp-for="CardExpDate" class="form-control" />
+                    <span asp-validation-for="CardExpDate" class="text-danger"></span>
+                </div>
+                <div class="col-sm">
+                    <label asp-for="CvcNo">CVC No:</label>
+                    <input asp-for="CvcNo" class="form-control" />
+                    <span asp-validation-for="CvcNo" class="text-danger"></span>
+                </div>
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md">
+                    <button type="submit" class="btn btn-primary">Confirm</button><!--<a asp-controller="GamingPC" asp-action="Confirm"><button class="btn btn-primary">Cofirm</button></a>-->
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <span></span>
+
+</body>
+</html>

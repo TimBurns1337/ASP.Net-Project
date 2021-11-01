@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace ASP.Net_project.Models
 {
-
- 
-    public class Purchase : GamingPCController
+    public class Purchase
     {
         public int PurchaseId { get; set; }   
         [Required]

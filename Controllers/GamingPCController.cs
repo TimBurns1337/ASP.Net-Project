@@ -77,9 +77,15 @@ namespace ASP.Net_project.Controllers
 
         public IActionResult Purchase(int id)
         {
-            ViewBag.Action = "Index";
-            ViewBag.Computer = id;
-            return View("Index", "Purchase");
+            ViewBag.Action = "Purchase";
+            ViewBag.PurCompId = id;
+            return View();
+        }
+
+        public IActionResult Confirm()
+        {
+            ViewBag.Action = "Confirm";
+            return View();
         }
 
     }
