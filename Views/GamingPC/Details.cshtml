@@ -17,6 +17,6 @@
         <p>@Model.Componets</p>
     </div>
     <div>
-        <button type="button"><a asp-controller="Purchase" asp-action="Index" asp-route-id="@Model.PcId">Add to cart!</a></button>
+        <a asp-controller="Purchase" asp-action="Index" asp-route-id="@Model.PcId"> <button class="btn btn-primary"> Add to cart!</button></a>
     </div>
 </div>
