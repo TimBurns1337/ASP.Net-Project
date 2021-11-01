@@ -1,5 +1,6 @@
 ﻿using ASP.Net_project.Models;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace ASP.Net_project.Controllers
 
     public class GamingPCController : Controller
     { 
-        IList<GamingPC> gamingPCs = new List<GamingPC>
+        IList<GamingPC> gamingPCs = new List<GamingPC>        
         { new GamingPC()
         { PcId = 1,
             Componets = "High Performance Gaming PC " +
@@ -81,14 +82,22 @@ namespace ASP.Net_project.Controllers
             ViewBag.PurCompId = id;
             return View();
         }
-
-        public IActionResult Confirm(int id, string Fname, string Lname)
+       
+        [HttpPost]
+        public IActionResult Confirm(IFormCollection collection)
         {
-            ViewBag.Action = "Confirm";
-            ViewBag.PurCompId = id;
-            ViewBag.PurFname = Fname;
-            ViewBag.PurLname = Lname;
-            return View();
+            try
+            {
+                ViewData["Fname"] = collection["Fname"];
+                ViewData["Lname"] = collection["Lname"];
+                ViewData["Price"] = collection["Price"];
+                ViewData["Address"] = collection["Address"];
+                return View("Confirm");
+            }
+            catch
+            {
+                return View();
+            }
         }
 
     }
