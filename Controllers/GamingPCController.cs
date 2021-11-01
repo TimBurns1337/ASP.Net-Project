@@ -96,9 +96,10 @@ namespace ASP.Net_project.Controllers
         {
             ViewBag.Action = "Purchase";
             ViewBag.PurCompId = id;
-            ViewBag.PurCompPrice = Purchase2(gpc);
-         
-            
+            //ViewBag.PurCompPrice = Purchase2(gpc);
+            // test below - can recieve this value but not the above 
+            ViewBag.PurCompPrice = 4000;
+
             return View();
         }
 
