@@ -1,26 +1,23 @@
 ﻿@model Purchase
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
+@{
+    string title = ViewBag.Action + " Purchase";
+    ViewBag.Title = title;
+}
 
     <h3 class="h3 text-black-50 text-center">Credit Card Payment</h3>
 
     <div class="container">
-        <form method="post" asp-action="Confirm" class="form-group">
+        <form method="post" asp-action="Confirm">
             <div class="row">
                 <div class="col-sm">
                     <label asp-for="PurchaseId">Purchase Id:</label>
                     <input asp-for="PurchaseId" class="form-control" />
-                    <span asp-validation-for="PurchaseId" class="text-danger"></span>
+                    @*<span asp-validation-for="PurchaseId" class="text-danger"></span>*@
                 </div>
                 <div class="col-sm">
                     <label asp-for="ComputerId">Computer:</label>
                     <input asp-for="ComputerId" class="form-control" value="@ViewBag.PurCompId" readonly />
-                    <span asp-validation-for="ComputerId" class="text-danger"></span>
+                    @*<span asp-validation-for="ComputerId" class="text-danger"></span>*@
                 </div>
             </div>
 
@@ -28,7 +25,8 @@
                 <div class="col-sm">
                     <label asp-for="Fname">First Name:</label>
                     <input asp-for="Fname" class="form-control" />
-                    <span asp-validation-for="Fname" class="text-danger"></span>
+                    @Html.ValidationMessageFor(model => model.Fname)
+                    @*<span asp-validation-for="Fname" class="text-danger"></span>*@
                 </div>
                 <div class="col-sm">
                     <label asp-for="Lname">Last Name:</label>
@@ -95,16 +93,11 @@
             <br />
             <div class="row">
                 <div class="col-md">
-                    <button type="submit" class="btn btn-primary">Confirm</button><!--<a asp-controller="GamingPC" asp-action="Confirm"><button class="btn btn-primary">Cofirm</button></a>-->
+                    <button type="submit" class="btn btn-primary">Confirm</button>
                 </div>
-
             </div>
-
         </form>
 
     </div>
 
     <span></span>
-
-</body>
-</html>
