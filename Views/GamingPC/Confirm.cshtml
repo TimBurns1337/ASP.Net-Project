@@ -1,9 +1,18 @@
 ﻿@model Purchase
-    
-<dl>
-    <dt>First Name : </dt>
-    <dd>@Model.Fname</dd>
-    <dt>Last Name : </dt>
-    <dd>@Model.Lname</dd>
+<!-- model GamingPC-->
 
-</dl>
+<p>
+    Thank you @ViewData["Fname"] @ViewData["Lname"] for your purchase.
+</p>
+<p>
+    Your purchase will be shipped to @ViewData["Address"] and costing $@ViewData["Price"] before shipping and taxes.
+</p>
+
+<!--
+
+    <p>
+    Your purchase will be shipped to ViewData["Address"] and costing $Model.Price before shipping and taxes.
+</p>
+
+
+-->
