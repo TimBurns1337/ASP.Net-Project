@@ -8,17 +8,15 @@
     <span asp-validation-summary="All" class="text-danger"></span>
 
     <div class="container">
-        <form method="post" asp-action="Confirm">
+        <form asp-action="Confirm" method="post">
             <div class="row">
-                <div class="col-sm">
+                <div class="col-sm"> @*This field will be filled with DB *@
                     <label asp-for="PurchaseId">Purchase Id:</label>
-                    <input asp-for="PurchaseId" class="form-control" />
-                    @*<span asp-validation-for="PurchaseId" class="text-danger"></span>*@
+                    <input asp-for="PurchaseId" class="form-control" />  
                 </div>
                 <div class="col-sm">
                     <label asp-for="ComputerId">Computer:</label>
                     <input asp-for="ComputerId" class="form-control" value="@ViewBag.PurCompId" readonly />
-                    @*<span asp-validation-for="ComputerId" class="text-danger"></span>*@
                 </div>
             </div>
 
@@ -27,7 +25,6 @@
                     <label asp-for="Fname">First Name:</label>
                     <input asp-for="Fname" class="form-control" />
                     @Html.ValidationMessageFor(model => model.Fname)
-                    @*<span asp-validation-for="Fname" class="text-danger"></span>*@
                 </div>
                 <div class="col-sm">
                     <label asp-for="Lname">Last Name:</label>

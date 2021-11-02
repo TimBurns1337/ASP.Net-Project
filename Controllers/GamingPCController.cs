@@ -76,15 +76,11 @@ namespace ASP.Net_project.Controllers
             return View(gamingPCs[id - 1]);
         }
 
-        public GamingPC Purchase2(int id)
-        {
-            return gamingPCs.FirstOrDefault(gpc => gpc.PcId == id);            
-        }
-        public IActionResult Purchase(int id, GamingPC gpc)
+        public IActionResult Purchase(int id)
         {
             ViewBag.Action = "Purchase";
             ViewBag.PurCompId = id;
-            GamingPC GPC = Purchase2(id);
+            GamingPC GPC = gamingPCs.FirstOrDefault(gpc => gpc.PcId == id);
             
             ViewBag.PurCompPrice = GPC.Price;
             //ViewBag.PurCompPrice = Purchase(gpc);
