@@ -81,6 +81,7 @@ namespace ASP.Net_project.Controllers
         [HttpPost]
         public Double Purchase2(GamingPC model)
         {
+            // not working properly - no database to query 
             try
             {                
                 Double purPrice = model.Price;
