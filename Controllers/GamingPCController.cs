@@ -76,30 +76,20 @@ namespace ASP.Net_project.Controllers
             return View(gamingPCs[id - 1]);
         }
 
-       
-
-        [HttpPost]
-        public Double Purchase2(GamingPC model)
+        public GamingPC Purchase2(int id)
         {
-            // not working properly - no database to query 
-            try
-            {                
-                Double purPrice = model.Price;
-
-                return purPrice;
-            }
-            catch
-            {
-                return 0.0;
-            }
-        } 
+            return gamingPCs.FirstOrDefault(gpc => gpc.PcId == id);            
+        }
         public IActionResult Purchase(int id, GamingPC gpc)
         {
             ViewBag.Action = "Purchase";
             ViewBag.PurCompId = id;
-            //ViewBag.PurCompPrice = Purchase2(gpc);
+            GamingPC GPC = Purchase2(id);
+            
+            ViewBag.PurCompPrice = GPC.Price;
+            //ViewBag.PurCompPrice = Purchase(gpc);
             // test below - can recieve this value but not the above 
-            ViewBag.PurCompPrice = 4000;
+            //ViewBag.PurCompPrice = 4000;
 
             return View();
         }
