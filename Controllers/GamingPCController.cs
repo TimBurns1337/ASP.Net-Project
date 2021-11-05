@@ -83,6 +83,7 @@ namespace ASP.Net_project.Controllers
             GamingPC GPC = gamingPCs.FirstOrDefault(gpc => gpc.PcId == id);
             
             ViewBag.PurCompPrice = GPC.Price;
+            
             //ViewBag.PurCompPrice = Purchase(gpc);
             // test below - can recieve this value but not the above 
             //ViewBag.PurCompPrice = 4000;
@@ -94,18 +95,25 @@ namespace ASP.Net_project.Controllers
 
         [HttpPost]
         public IActionResult Confirm(IFormCollection collection)
-        {
+        {// add validation check here 
             try
             {
-                ViewData["Fname"] = collection["Fname"];
-                ViewData["Lname"] = collection["Lname"];
-                ViewData["Price"] = collection["Price"];
-                ViewData["Address"] = collection["Address"];
-                return View("Confirm");
+                if (ModelState.IsValid) // checking validation for the model - this is gamingpc
+                {
+                    ViewData["Fname"] = collection["Fname"];
+                    ViewData["Lname"] = collection["Lname"];
+                    ViewData["Price"] = collection["Price"];
+                    ViewData["Address"] = collection["Address"];
+                    return View("Confirm");
+                }
+                else
+                {
+                    return View("Confirm");
+                }
             }
             catch
             {
-                return View();
+                return View("Index");
             }
         }
 
