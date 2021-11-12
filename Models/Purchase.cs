@@ -11,7 +11,7 @@ namespace ASP.Net_project.Models
     {
         public int PurchaseId { get; set; }   
         
-        [Required]
+        [Required (ErrorMessage ="This field is required")]
         public int ComputerId { get; set; }
         
         [Required]
