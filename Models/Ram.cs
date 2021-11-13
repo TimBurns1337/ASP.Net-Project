@@ -11,7 +11,7 @@ namespace ASP.Net_project.Models
         
         public string RamName { get; set; }
         
-        public string RamPrice { get; set; }    
+        public Double RamPrice { get; set; }    
         
         // may want to add image link and brnad name in further migrations 
     }

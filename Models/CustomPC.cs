@@ -26,6 +26,6 @@ namespace ASP.Net_project.Models
         [Required]
         public string Case { get; set; } //Istikbal
 
-
+        // *** Created data folder for context and dbinitial ***
     }
 }

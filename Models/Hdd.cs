@@ -11,7 +11,7 @@ namespace ASP.Net_project.Models
 
         public string HddName { get; set; }
 
-        public string HddPrice { get; set; }
+        public Double HddPrice { get; set; }
 
         // may want to add image link and brnad name in further migrations 
     }

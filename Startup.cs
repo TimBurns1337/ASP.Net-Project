@@ -1,3 +1,5 @@
+
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -7,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ASP.Net_project.Data;
 
 namespace ASP.Net_project
 {
@@ -22,6 +25,12 @@ namespace ASP.Net_project
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // added these two lines below - Tim
+            services.AddDbContext<ComputerContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            // need this as well
+            services.AddDatabaseDeveloperPageExceptionFilter();
+
             services.AddControllersWithViews();
         }
 
