@@ -105,6 +105,33 @@ namespace ASP.Net_project.Data
                 context.Powers.Add(p);
             }
             context.SaveChanges();
+
+            // Cooling data
+            var coolings = new Cooling[]
+            {
+            new Cooling{CoolingId = 1, CoolingName = "NZXT Kraken X53 240mm - RL-KRX53-01 - AIO RGB CPU Liquid Cooler ", CoolingPrice = 113.18},
+            new Cooling{CoolingId = 2, CoolingName = "Vetroo V240 Water Cooler r", CoolingPrice = 79.99},
+            new Cooling{CoolingId = 3, CoolingName = "Thermaltake Floe Triple Riing RGB 360 TT Premium Edition", CoolingPrice = 199.99}
+            };
+            foreach (Cooling cl in coolings)
+            {
+                context.Coolings.Add(cl);
+            }
+            context.SaveChanges();
+
+
+            // Case data
+            var cases = new Case[]
+            {
+            new Case{CaseId = 1, CaseName = "MUSETEX 6pcs 120mm ARGB Fans and USB3.0 ATX Mid-Tower Chassis Gaming PC Case", CasePrice = 89.99},
+            new Case{CaseId = 2, CaseName = "ATX Mid-Tower PC Gaming Case ", CasePrice = 62.99},
+            new Case{CaseId= 3, CaseName = "GIM ATX Mid-Tower Case", CasePrice = 115.99}
+            };
+            foreach (Case cs in cases)
+            {
+                context.Cases.Add(cs);
+            }
+            context.SaveChanges();
         }
     }
 }
