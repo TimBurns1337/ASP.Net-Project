@@ -11,6 +11,6 @@ namespace ASP.Net_project.Models
 
         public string CoolingName { get; set; }
 
-        public Double CoolingPrice { get; set; }
+        public double CoolingPrice { get; set; }
     }
 }

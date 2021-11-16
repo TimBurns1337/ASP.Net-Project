@@ -18,9 +18,11 @@ namespace ASP.Net_project.Data
         public DbSet<Ram> Rams { get; set; }
         public DbSet<Hdd> Hdds { get; set; }
         public DbSet<Power> Powers { get; set; }
-       
         public DbSet<Cooling> Coolings { get; set; }
-        public DbSet<Case> Cases{ get; set; }
+        public DbSet<Case> Cases { get; set; }
+        public DbSet<Cpu> Cpus { get; set; }
+        public DbSet<Gpu> Gpus { get; set; }
+        public DbSet<MotherBoard> MotherBoards { get; set; }
 
         // add your db sets below inside this method - used DbInitializer for data
         protected override void OnModelCreating(ModelBuilder modelBuilder)

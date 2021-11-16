@@ -11,6 +11,6 @@ namespace ASP.Net_project.Models
 
         public string CaseName { get; set; }
 
-        public Double CasePrice { get; set; }
+        public double CasePrice { get; set; }
     }
 }
