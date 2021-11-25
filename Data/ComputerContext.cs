@@ -32,6 +32,9 @@ namespace ASP.Net_project.Data
             modelBuilder.Entity<Ram>().ToTable("Rams");
             modelBuilder.Entity<Hdd>().ToTable("Hdds");
             modelBuilder.Entity<Power>().ToTable("Powers");
+            modelBuilder.Entity<Cpu>().ToTable("Cpus");
+            modelBuilder.Entity<Gpu>().ToTable("Gpus");
+            modelBuilder.Entity<MotherBoard>().ToTable("MotherBoards");
         }
     }
 }

@@ -132,6 +132,47 @@ namespace ASP.Net_project.Data
                 context.Cases.Add(cs);
             }
             context.SaveChanges();
+
+            //Cpu Data
+            var cpus = new Cpu[]
+            {
+                new Cpu{CpuId= 1, CpuName="Intel Core i3 10100F", CpuPrice=129.99},
+                new Cpu{CpuId= 2, CpuName="AMD Ryzen 5 5600X", CpuPrice=358.99},
+                new Cpu{CpuId= 3, CpuName="Intel Core i7 10700K", CpuPrice=418.99}
+            };
+            foreach(Cpu cpu in cpus)
+            {
+                context.Cpus.Add(cpu);
+            }
+            context.SaveChanges();
+
+            //Gpu Data
+            var gpus = new Gpu[]
+            {
+                new Gpu{GpuId=1, GpuName="AMD FirePro W9000", GpuPrice=350.99},
+                new Gpu{GpuId=2, GpuName="Gigabyte GeForce GT 1030", GpuPrice=271.70},
+                new Gpu{GpuId=3, GpuName="Asus GeForce GTX 1050", GpuPrice=349.46}
+            };
+            foreach (Gpu gpu in gpus)
+            {
+                context.Gpus.Add(gpu);
+            }
+            context.SaveChanges();
+
+            //MotherBoard Data
+            var mb = new MotherBoard[]
+            {
+                new MotherBoard{MotherBoardId=1, MotherBoardName="Asus h170-pro/csm", MotherBoardPrice=361.25},
+                new MotherBoard{MotherBoardId=2, MotherBoardName="MSI MAG Z690", MotherBoardPrice=391.25},
+                new MotherBoard{MotherBoardId=3, MotherBoardName="Intel DX58SO Extreme", MotherBoardPrice=561.25}
+            };
+            foreach (MotherBoard mbItem in mb)
+            {
+                context.MotherBoards.Add(mbItem);
+            }
+            context.SaveChanges();
+
+
         }
     }
 }
