@@ -16,7 +16,5 @@ namespace ASP.Net_project.Models
         public string ImageLink { get; set; }
         public int Price { get; set; }
 
-
-
     }
 }

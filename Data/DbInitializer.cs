@@ -70,9 +70,9 @@ namespace ASP.Net_project.Data
             // Ram data
             var rams = new Ram[]
             {
-            new Ram{RamId = 1, RamName = "G.SKILL Ripjaws V Series 32GB (2 x 16GB)", RamPrice = 149.99},
-            new Ram{RamId = 2, RamName = "G.SKILL Ripjaws V Series 16GB (2 x 8GB)", RamPrice = 89.99},
-            new Ram{RamId = 3, RamName = "CORSAIR Vengeance RGB Pro 16GB (2 x 8GB)", RamPrice = 123.99}
+            new Ram{RamId = 1, RamName = "G.SKILL Ripjaws V Series 32GB (2 x 16GB)", RamPrice = 149.99, ImageLink = "ram-1.jpg"},
+            new Ram{RamId = 2, RamName = "G.SKILL Ripjaws V Series 16GB (2 x 8GB)", RamPrice = 89.99, ImageLink = "ram-2.jpg"},
+            new Ram{RamId = 3, RamName = "CORSAIR Vengeance RGB Pro 16GB (2 x 8GB)", RamPrice = 123.99, ImageLink = "ram-3.jpg"}
             };
             foreach (Ram r in rams)
             {
@@ -83,9 +83,9 @@ namespace ASP.Net_project.Data
             // HDD / SSD data
             var hdds = new Hdd[]
             {
-            new Hdd{HddId = 1, HddName = "Seagate BarraCuda ST2000DM008 2TB", HddPrice = 89.99},
-            new Hdd{HddId = 2, HddName = "WD Blue 3D NAND 1TB Internal SSD", HddPrice = 139.99},
-            new Hdd{HddId = 3, HddName = "WD Blue 3D NAND 2TB Internal SSD", HddPrice = 269.99}
+            new Hdd{HddId = 1, HddName = "Seagate BarraCuda ST2000DM008 2TB", HddPrice = 89.99, ImageLink = "HDD-1.jpg"},
+            new Hdd{HddId = 2, HddName = "WD Blue 3D NAND 1TB Internal SSD", HddPrice = 139.99, ImageLink = "HDD-2.jpg"},
+            new Hdd{HddId = 3, HddName = "WD Blue 3D NAND 2TB Internal SSD", HddPrice = 269.99, ImageLink = "HDD-3.jpg"}
             };
             foreach (Hdd h in hdds)
             {
@@ -96,9 +96,9 @@ namespace ASP.Net_project.Data
             // Power data
             var powers = new Power[]
             {
-            new Power{PowerId = 1, PowerName = "ASUS ROG STRIX 850G 850W Gold", PowerPrice = 246.99},
-            new Power{PowerId = 2, PowerName = "ASUS ROG Strix 750 Fully Modular 80 Plus Gold 750W", PowerPrice = 139.99},
-            new Power{PowerId = 3, PowerName = "CORSAIR RMx Series (2021) RM750x", PowerPrice = 169.99}
+            new Power{PowerId = 1, PowerName = "ASUS ROG STRIX 850G 850W Gold", PowerPrice = 246.99, ImageLink = "power-1.jpg"},
+            new Power{PowerId = 2, PowerName = "ASUS ROG Strix 750 Fully Modular 80 Plus Gold 750W", PowerPrice = 139.99, ImageLink = "power-2.jpg"},
+            new Power{PowerId = 3, PowerName = "CORSAIR RMx Series (2021) RM750x", PowerPrice = 169.99, ImageLink = "power-3.jpg"}
             };
             foreach (Power p in powers)
             {
@@ -109,9 +109,9 @@ namespace ASP.Net_project.Data
             // Cooling data
             var coolings = new Cooling[]
             {
-            new Cooling{CoolingId = 1, CoolingName = "NZXT Kraken X53 240mm - RL-KRX53-01 - AIO RGB CPU Liquid Cooler ", CoolingPrice = 113.18},
-            new Cooling{CoolingId = 2, CoolingName = "Vetroo V240 Water Cooler r", CoolingPrice = 79.99},
-            new Cooling{CoolingId = 3, CoolingName = "Thermaltake Floe Triple Riing RGB 360 TT Premium Edition", CoolingPrice = 199.99}
+            new Cooling{CoolingId = 1, CoolingName = "NZXT Kraken X53 240mm - RL-KRX53-01 - AIO RGB CPU Liquid Cooler ", CoolingPrice = 113.18, ImageLink = "cool-1.jpg"},
+            new Cooling{CoolingId = 2, CoolingName = "Vetroo V240 Water Cooler r", CoolingPrice = 79.99, ImageLink = "cool-2.jpg"},
+            new Cooling{CoolingId = 3, CoolingName = "Thermaltake Floe Triple Riing RGB 360 TT Premium Edition", CoolingPrice = 199.99, ImageLink = "cool-3.jpg"}
             };
             foreach (Cooling cl in coolings)
             {
@@ -123,9 +123,9 @@ namespace ASP.Net_project.Data
             // Case data
             var cases = new Case[]
             {
-            new Case{CaseId = 1, CaseName = "MUSETEX 6pcs 120mm ARGB Fans and USB3.0 ATX Mid-Tower Chassis Gaming PC Case", CasePrice = 89.99},
-            new Case{CaseId = 2, CaseName = "ATX Mid-Tower PC Gaming Case ", CasePrice = 62.99},
-            new Case{CaseId= 3, CaseName = "GIM ATX Mid-Tower Case", CasePrice = 115.99}
+            new Case{CaseId = 1, CaseName = "MUSETEX 6pcs 120mm ARGB Fans and USB3.0 ATX Mid-Tower Chassis Gaming PC Case", CasePrice = 89.99, ImageLink = "case-1.jpg"},
+            new Case{CaseId = 2, CaseName = "ATX Mid-Tower PC Gaming Case ", CasePrice = 62.99, ImageLink = "case-2.jpg"},
+            new Case{CaseId= 3, CaseName = "GIM ATX Mid-Tower Case", CasePrice = 115.99, ImageLink = "case-3.jpg"}
             };
             foreach (Case cs in cases)
             {
@@ -136,9 +136,9 @@ namespace ASP.Net_project.Data
             //Cpu Data
             var cpus = new Cpu[]
             {
-                new Cpu{CpuId= 1, CpuName="Intel Core i3 10100F", CpuPrice=129.99},
-                new Cpu{CpuId= 2, CpuName="AMD Ryzen 5 5600X", CpuPrice=358.99},
-                new Cpu{CpuId= 3, CpuName="Intel Core i7 10700K", CpuPrice=418.99}
+                new Cpu{CpuId= 1, CpuName="Intel Core i3 10100F", CpuPrice=129.99, ImageLink = "cpu-1.jpg"},
+                new Cpu{CpuId= 2, CpuName="AMD Ryzen 5 5600X", CpuPrice=358.99, ImageLink = "cpu-2.jpg"},
+                new Cpu{CpuId= 3, CpuName="Intel Core i7 10700K", CpuPrice=418.99, ImageLink = "cpu-3.jpg"}
             };
             foreach(Cpu cpu in cpus)
             {
@@ -149,9 +149,9 @@ namespace ASP.Net_project.Data
             //Gpu Data
             var gpus = new Gpu[]
             {
-                new Gpu{GpuId=1, GpuName="AMD FirePro W9000", GpuPrice=350.99},
-                new Gpu{GpuId=2, GpuName="Gigabyte GeForce GT 1030", GpuPrice=271.70},
-                new Gpu{GpuId=3, GpuName="Asus GeForce GTX 1050", GpuPrice=349.46}
+                new Gpu{GpuId=1, GpuName="AMD FirePro W9000", GpuPrice=350.99, ImageLink = "gpu-1.jpg"},
+                new Gpu{GpuId=2, GpuName="Gigabyte GeForce GT 1030", GpuPrice=271.70, ImageLink = "gpu-2.jpg"},
+                new Gpu{GpuId=3, GpuName="Asus GeForce GTX 1050", GpuPrice=349.46, ImageLink = "gpu-3.jpg"}
             };
             foreach (Gpu gpu in gpus)
             {
@@ -162,9 +162,9 @@ namespace ASP.Net_project.Data
             //MotherBoard Data
             var mb = new MotherBoard[]
             {
-                new MotherBoard{MotherBoardId=1, MotherBoardName="Asus h170-pro/csm", MotherBoardPrice=361.25},
-                new MotherBoard{MotherBoardId=2, MotherBoardName="MSI MAG Z690", MotherBoardPrice=391.25},
-                new MotherBoard{MotherBoardId=3, MotherBoardName="Intel DX58SO Extreme", MotherBoardPrice=561.25}
+                new MotherBoard{MotherBoardId=1, MotherBoardName="Asus h170-pro/csm", MotherBoardPrice=361.25, ImageLink = "mb-1.jpg"},
+                new MotherBoard{MotherBoardId=2, MotherBoardName="MSI MAG Z690", MotherBoardPrice=391.25, ImageLink = "mb-2.jpg"},
+                new MotherBoard{MotherBoardId=3, MotherBoardName="Intel DX58SO Extreme", MotherBoardPrice=561.25, ImageLink = "mb-3.jpg"}
             };
             foreach (MotherBoard mbItem in mb)
             {
