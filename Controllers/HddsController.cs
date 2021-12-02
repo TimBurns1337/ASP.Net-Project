@@ -45,6 +45,7 @@ namespace ASP.Net_project.Controllers
 
         public async Task<IActionResult> AddPart([Bind("CustomPcId,Hdd,HddPrice")] CustomPC customPC)
         {
+            //var custom = customPC.FirstOrDefault();
             if (ModelState.IsValid)
             {
                 _context.Add(customPC);
