@@ -49,9 +49,8 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.GamingPCId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.GamingPCId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.GamingPCId">Delete</a>
+                <a asp-action="Add" asp-route-id="@item.GamingPCId">Add</a> |
+                <a asp-action="Details" asp-route-id="@item.GamingPCId">Details</a> <a asp-action="Delete" asp-route-id="@item.GamingPCId">Delete</a>
             </td>
         </tr>
 }
