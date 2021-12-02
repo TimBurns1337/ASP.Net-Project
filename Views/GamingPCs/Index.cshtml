@@ -13,19 +13,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Componets)
+                Components
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Summary)
+                Summary
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImageLink)
+                Link
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                Price
             </th>
             <th></th>
         </tr>
@@ -43,7 +43,7 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImageLink)
+                <img src="/images/@Html.DisplayFor(modelItem => item.ImageLink)" width="50" height="50" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Price)

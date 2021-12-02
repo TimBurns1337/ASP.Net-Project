@@ -10,22 +10,22 @@ using ASP.Net_project.Models;
 
 namespace ASP.Net_project.Controllers
 {
-    public class HddsController : Controller
+    public class CustomPCsController : Controller
     {
         private readonly ComputerContext _context;
 
-        public HddsController(ComputerContext context)
+        public CustomPCsController(ComputerContext context)
         {
             _context = context;
         }
 
-        // GET: Hdds
+        // GET: CustomPCs
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Hdds.ToListAsync());
+            return View(await _context.CustomPC.ToListAsync());
         }
 
-        // GET: Hdds/Details/5
+        // GET: CustomPCs/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,19 +33,29 @@ namespace ASP.Net_project.Controllers
                 return NotFound();
             }
 
-            var hdd = await _context.Hdds
-                .FirstOrDefaultAsync(m => m.HddId == id);
-            if (hdd == null)
+            var customPC = await _context.CustomPC
+                .FirstOrDefaultAsync(m => m.CustomPcId == id);
+            if (customPC == null)
             {
                 return NotFound();
             }
 
-            return View(hdd);
+            return View(customPC);
         }
 
-        public async Task<IActionResult> AddPart([Bind("CustomPcId,Hdd,HddPrice")] CustomPC customPC)
+        // GET: CustomPCs/Create
+        public IActionResult Create()
         {
-            //var custom = customPC.FirstOrDefault();
+            return View();
+        }
+
+        // POST: CustomPCs/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("CustomPcId,Cpu,CpuPrice,Gpu,GpuPrice,MotherBoard,MotherBoardPrice,Ram,RamPrice,Hdd,HddPrice,Power,PowerPrice,Cooling,CoolingPrice,Case,CasePrice")] CustomPC customPC)
+        {
             if (ModelState.IsValid)
             {
                 _context.Add(customPC);
@@ -55,49 +65,7 @@ namespace ASP.Net_project.Controllers
             return View(customPC);
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // GET: Hdds/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Hdds/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("HddId,HddName,HddPrice,ImageLink")] Hdd hdd)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(hdd);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(hdd);
-        }
-
-        // GET: Hdds/Edit/5
+        // GET: CustomPCs/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -105,22 +73,22 @@ namespace ASP.Net_project.Controllers
                 return NotFound();
             }
 
-            var hdd = await _context.Hdds.FindAsync(id);
-            if (hdd == null)
+            var customPC = await _context.CustomPC.FindAsync(id);
+            if (customPC == null)
             {
                 return NotFound();
             }
-            return View(hdd);
+            return View(customPC);
         }
 
-        // POST: Hdds/Edit/5
+        // POST: CustomPCs/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("HddId,HddName,HddPrice,ImageLink")] Hdd hdd)
+        public async Task<IActionResult> Edit(int id, [Bind("CustomPcId,Cpu,CpuPrice,Gpu,GpuPrice,MotherBoard,MotherBoardPrice,Ram,RamPrice,Hdd,HddPrice,Power,PowerPrice,Cooling,CoolingPrice,Case,CasePrice")] CustomPC customPC)
         {
-            if (id != hdd.HddId)
+            if (id != customPC.CustomPcId)
             {
                 return NotFound();
             }
@@ -129,12 +97,12 @@ namespace ASP.Net_project.Controllers
             {
                 try
                 {
-                    _context.Update(hdd);
+                    _context.Update(customPC);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!HddExists(hdd.HddId))
+                    if (!CustomPCExists(customPC.CustomPcId))
                     {
                         return NotFound();
                     }
@@ -145,10 +113,10 @@ namespace ASP.Net_project.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(hdd);
+            return View(customPC);
         }
 
-        // GET: Hdds/Delete/5
+        // GET: CustomPCs/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -156,30 +124,30 @@ namespace ASP.Net_project.Controllers
                 return NotFound();
             }
 
-            var hdd = await _context.Hdds
-                .FirstOrDefaultAsync(m => m.HddId == id);
-            if (hdd == null)
+            var customPC = await _context.CustomPC
+                .FirstOrDefaultAsync(m => m.CustomPcId == id);
+            if (customPC == null)
             {
                 return NotFound();
             }
 
-            return View(hdd);
+            return View(customPC);
         }
 
-        // POST: Hdds/Delete/5
+        // POST: CustomPCs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var hdd = await _context.Hdds.FindAsync(id);
-            _context.Hdds.Remove(hdd);
+            var customPC = await _context.CustomPC.FindAsync(id);
+            _context.CustomPC.Remove(customPC);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool HddExists(int id)
+        private bool CustomPCExists(int id)
         {
-            return _context.Hdds.Any(e => e.HddId == id);
+            return _context.CustomPC.Any(e => e.CustomPcId == id);
         }
     }
 }
