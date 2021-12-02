@@ -36,5 +36,8 @@ namespace ASP.Net_project.Data
             modelBuilder.Entity<Gpu>().ToTable("Gpus");
             modelBuilder.Entity<MotherBoard>().ToTable("MotherBoards");
         }
+
+        // add your db sets below inside this method - used DbInitializer for data
+        public DbSet<ASP.Net_project.Models.CustomPC> CustomPC { get; set; }
     }
 }
