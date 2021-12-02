@@ -1,25 +1,25 @@
 ﻿@model IEnumerable<ASP.Net_project.Models.Gpu>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Gpus";
 }
 
-<h1>Index</h1>
+<h1>Gpu</h1>
 
-<p>
+@*<p>
     <a asp-action="Create">Create New</a>
-</p>
+</p>*@
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.GpuName)
+                Gpu Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GpuPrice)
+                Gpu Price
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImageLink)
+                Image
             </th>
             <th></th>
         </tr>
@@ -31,10 +31,11 @@
                 @Html.DisplayFor(modelItem => item.GpuName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.GpuPrice)
+                $@Html.DisplayFor(modelItem => item.GpuPrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImageLink)
+                <img src="/images/@Html.DisplayFor(modelItem => item.ImageLink)" width="50" height="50" />
+                @*@Html.DisplayFor(modelItem => item.ImageLink)*@
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.GpuId">Edit</a> |

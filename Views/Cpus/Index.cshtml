@@ -1,25 +1,22 @@
 ﻿@model IEnumerable<ASP.Net_project.Models.Cpu>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Cpus";
 }
 
-<h1>Index</h1>
+<h1>Cpu</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CpuName)
+                Cpu Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CpuPrice)
+                Cpu Price
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImageLink)
+                Image
             </th>
             <th></th>
         </tr>
@@ -31,10 +28,10 @@
                 @Html.DisplayFor(modelItem => item.CpuName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CpuPrice)
+                $@Html.DisplayFor(modelItem => item.CpuPrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImageLink)
+                <img src="/images/@Html.DisplayFor(modelItem => item.ImageLink)" width="50" height="50"/>
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.CpuId">Edit</a> |

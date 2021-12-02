@@ -1,25 +1,25 @@
 ﻿@model IEnumerable<ASP.Net_project.Models.MotherBoard>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Mother Boards";
 }
 
-<h1>Index</h1>
+<h1>Mother Boards</h1>
 
-<p>
+@*<p>
     <a asp-action="Create">Create New</a>
-</p>
+</p>*@
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.MotherBoardName)
+                Mother Board Name @*@Html.DisplayNameFor(model => model.MotherBoardName)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MotherBoardPrice)
+               Price @*@Html.DisplayNameFor(model => model.MotherBoardPrice)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImageLink)
+                Image @*@Html.DisplayNameFor(model => model.ImageLink)*@
             </th>
             <th></th>
         </tr>
@@ -31,10 +31,10 @@
                 @Html.DisplayFor(modelItem => item.MotherBoardName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.MotherBoardPrice)
+                $@Html.DisplayFor(modelItem => item.MotherBoardPrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImageLink)
+                <img src="/images/@Html.DisplayFor(modelItem => item.ImageLink)" width="50" height="50" />
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MotherBoardId">Edit</a> |
