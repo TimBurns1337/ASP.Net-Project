@@ -33,8 +33,9 @@
             <td>
                 <img width="70" height="70" src="/images/@Html.DisplayFor(modelItem => item.ImageLink)" />
             </td>
-            <td>                
-                <a asp-action="Details" asp-route-id="@item.HddId">Details</a> |               
+            <td>
+                <a asp-action="Details" asp-route-id="@item.HddId">Details</a> |
+                <a asp-action="AddPart" asp-route-id="@item.HddId">Add</a> 
             </td>
         </tr>
 }
