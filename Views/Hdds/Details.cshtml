@@ -7,14 +7,17 @@
 <h1>@Html.DisplayFor(model => model.HddName)</h1>
 
 <div>
-        <p class = "col-sm-10">
-            Price $@Html.DisplayFor(model => model.HddPrice)
-        </p>
-        
-        <p class = "col-sm-10">
-            <img width="350" height="350" src="/images/@Html.DisplayFor(model => model.ImageLink)" />
-        </p>
+    <p class="col-sm-10">
+        Price $@Html.DisplayFor(model => model.HddPrice)
+    </p>
+
+    <p class="col-sm-10">
+        <img width="350" height="350" src="/images/@Html.DisplayFor(model => model.ImageLink)" />
+    </p>
 </div>
 <div>
-    
+    <a asp-action="AddPart" asp-route-id="@Model.HddId">Add</a> |
+    <a asp-action="Index">Back to List</a>
 </div>
+
+
