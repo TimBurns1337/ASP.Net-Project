@@ -1,0 +1,109 @@
+﻿@model ASP.Net_project.Models.CustomPC
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>CustomPC</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CustomPcId" />
+            <div class="form-group">
+                <label asp-for="Cpu" class="control-label"></label>
+                <input asp-for="Cpu" class="form-control" />
+                <span asp-validation-for="Cpu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CpuPrice" class="control-label"></label>
+                <input asp-for="CpuPrice" class="form-control" />
+                <span asp-validation-for="CpuPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gpu" class="control-label"></label>
+                <input asp-for="Gpu" class="form-control" />
+                <span asp-validation-for="Gpu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GpuPrice" class="control-label"></label>
+                <input asp-for="GpuPrice" class="form-control" />
+                <span asp-validation-for="GpuPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MotherBoard" class="control-label"></label>
+                <input asp-for="MotherBoard" class="form-control" />
+                <span asp-validation-for="MotherBoard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MotherBoardPrice" class="control-label"></label>
+                <input asp-for="MotherBoardPrice" class="form-control" />
+                <span asp-validation-for="MotherBoardPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ram" class="control-label"></label>
+                <input asp-for="Ram" class="form-control" />
+                <span asp-validation-for="Ram" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RamPrice" class="control-label"></label>
+                <input asp-for="RamPrice" class="form-control" />
+                <span asp-validation-for="RamPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hdd" class="control-label"></label>
+                <input asp-for="Hdd" class="form-control" />
+                <span asp-validation-for="Hdd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HddPrice" class="control-label"></label>
+                <input asp-for="HddPrice" class="form-control" />
+                <span asp-validation-for="HddPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Power" class="control-label"></label>
+                <input asp-for="Power" class="form-control" />
+                <span asp-validation-for="Power" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PowerPrice" class="control-label"></label>
+                <input asp-for="PowerPrice" class="form-control" />
+                <span asp-validation-for="PowerPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cooling" class="control-label"></label>
+                <input asp-for="Cooling" class="form-control" />
+                <span asp-validation-for="Cooling" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoolingPrice" class="control-label"></label>
+                <input asp-for="CoolingPrice" class="form-control" />
+                <span asp-validation-for="CoolingPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Case" class="control-label"></label>
+                <input asp-for="Case" class="form-control" />
+                <span asp-validation-for="Case" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CasePrice" class="control-label"></label>
+                <input asp-for="CasePrice" class="form-control" />
+                <span asp-validation-for="CasePrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
