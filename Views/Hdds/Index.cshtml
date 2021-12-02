@@ -6,20 +6,17 @@
 
 <h1>HDD/SDD</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.HddName)
+                Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.HddPrice)
+                price
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImageLink)
+                Image
             </th>
             <th></th>
         </tr>
@@ -31,10 +28,10 @@
                 @Html.DisplayFor(modelItem => item.HddName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.HddPrice)
+                $@Html.DisplayFor(modelItem => item.HddPrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImageLink)
+                <img width="70" height="70" src="/images/@Html.DisplayFor(modelItem => item.ImageLink)" />
             </td>
             <td>                
                 <a asp-action="Details" asp-route-id="@item.HddId">Details</a> |               

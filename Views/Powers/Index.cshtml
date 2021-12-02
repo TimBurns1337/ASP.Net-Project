@@ -13,13 +13,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.PowerName)
+                Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PowerPrice)
+                Price
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImageLink)
+                Image
             </th>
             <th></th>
         </tr>
@@ -31,10 +31,10 @@
                 @Html.DisplayFor(modelItem => item.PowerName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PowerPrice)
+                $@Html.DisplayFor(modelItem => item.PowerPrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImageLink)
+                <img width="70"  height="70" src="/images/@Html.DisplayFor(modelItem => item.ImageLink)" />
             </td>
             <td>               
                 <a asp-action="Details" asp-route-id="@item.PowerId">Details</a> |               
