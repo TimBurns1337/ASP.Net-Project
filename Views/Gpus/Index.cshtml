@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ASP.Net_project.Models.Gpu>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GpuName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GpuPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageLink)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GpuName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GpuPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImageLink)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.GpuId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.GpuId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.GpuId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,44 @@
+﻿@model ASP.Net_project.Models.Cooling
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Cooling</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CoolingId" />
+            <div class="form-group">
+                <label asp-for="CoolingName" class="control-label"></label>
+                <input asp-for="CoolingName" class="form-control" />
+                <span asp-validation-for="CoolingName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoolingPrice" class="control-label"></label>
+                <input asp-for="CoolingPrice" class="form-control" />
+                <span asp-validation-for="CoolingPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageLink" class="control-label"></label>
+                <input asp-for="ImageLink" class="form-control" />
+                <span asp-validation-for="ImageLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

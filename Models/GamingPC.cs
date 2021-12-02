@@ -7,7 +7,7 @@ namespace ASP.Net_project.Models
 {
     public class GamingPC
     {
-        public int PcId { get; set; }
+        public int GamingPCId { get; set; }
         // see all the details of the pc 
         public string Componets { get; set; }
         // proived a shorted view of components - cpu and gpu 
